@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>Moment DateTime Format</title>
+<!-- reference Moment.js library -->
+<script
+src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"
+type="text/javascript"></script>
+</head>
+<body>
+<h2>Moment Date</h2>
+<!-- container for Moment.js output -->
+<div id="displayMoment"></div>
+<h2>JavaScript Date</h2>
+<!-- container for JavaScript Date output -->
+<div id="displayJsDate"></div>
+<h2>Number of Days Since Birthdate</h2>
+<div id="days"></div>
+<h2>Time Since Day of Birth</h2>
+<div id="Birthday"></div>
+<h3>Closest Date</h3>
+<div id="closer"></div>
+<h3>Which Came First</h3>
+<div id="before"></div>
+<h3>London Time Zone</h3>
+<div id="London"></div>
+
+
+
+<script type="text/javascript">
+(function() {
+// instantiate a moment object
+
+var bDay = moment('1990-03-27', 'YYYY-MM-DD');
+var now = moment() //created second empty moment for present time
+var diffYears = moment.duration(now.diff(bDay)).years();
+//.years gets the years, .asyears gets the length of the duration
+var diffMonths = moment.duration(now.diff(bDay)).months();
+//.months gets the months (0-11), .asmonths gets the length of the duration
+var diffDays = moment.duration(now.diff(bDay)).days();
+var diffDaysTwo = moment.duration(now.diff(bDay)).asDays();
+//.days gets the days (0-30), .asdays gets the length of the duration
+// .week is (0-4), The length of a duration in weeks is defined as 7 days.
+//Pay attention that unlike the other getters for duration, weeks are counted 
+//as a subset of the days, and are not taken off the days count.
+var eDisplaySubDays = document.getElementById('Birthday');
+eDisplaySubDays.innerHTML = `${diffYears} years, ${diffMonths} months, ${diffDays} days`;
+var eDisplayDays = document.getElementById('days');
+eDisplayDays.innerHTML = `${diffDaysTwo} days since birthdate`;
+
+
+var NowMoment = moment();
+
+var NowDate = new Date();
+// instantiate a JavaScript Date object
+
+// display value of moment object in #displayMoment div
+var eDisplayMoment = document.getElementById('displayMoment');
+eDisplayMoment.innerHTML = NowMoment;
+// display value of Date object in #displayJsDate div
+var eDisplayDate = document.getElementById('displayJsDate');
+eDisplayDate.innerHTML = NowDate;
+
+var oneTime = moment('2021-11-08', 'YYYY-MM-DD')
+var twoTime = moment('2023-05-01', 'YYYY-MM-DD')
+var checkOne = moment.duration(now.diff(oneTime)).days //will have more days. Is before
+var checkTwo = moment.duration(now.diff(twoTime)).days //will have less days. Is after
+
+
+
+if(checkOne > checkTwo){
+    displayClosest = oneTime}
+    else {
+        displayClosest = twoTime
+    }
+
+    var eDisplayCloser = document.getElementById('closer');
+eDisplayCloser.innerHTML = `${displayClosest}`;
+
+if(checkOne - checkTwo === '-') {
+    displayBefore = oneTime}
+    else {
+        displayBefore = twoTime
+    }
+    var eDisplayBefore = document.getElementById('before');
+// eDisplayBefore.innerHTML = `${displayBefore} comes before ${displayClosest}`;
+eDisplayBefore.innerHTML = `${oneTime} comes before ${twoTime}`;
+
+var london = moment('Wed May 10 2023 02:54 GMT+1', 'ddd MMM DD YYYY HH:mm [GMT]ZZ')
+
+var eDisplayLondon = document.getElementById('London');
+eDisplayLondon.innerHTML = london;
+
+}
+
+)();
+</script>
+</body>
+</html>
