@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="calculator" name = "calc">
+        <input type = "text" class = "value" readonly name = "txt"> 
+        <!--The Boolean readonly attribute, when present, makes the element not mutable, meaning the user can not edit the control. -->
+        <!--In this case, the value needs to be the output, and not changed by the user-->
+
+        <div class="buttons">
+          <!--a div tag creates a block-level element while a <span> tag wraps around an inline element.-->
+          <span class = 'num' onclick = 'calc.txt.value = " "'><i>Clear</i></span>
+          <span class = 'num' onclick = 'calc.txt.value += "/"'><i>/</i></span>
+          <span class = 'num' onclick = 'calc.txt.value += "*"'><i>*</i></span>
+         <!-- the '+=' is needed to add digits-->
+
+          <span class = 'num' onclick = 'calc.txt.value += "7"'><i>7</i></span> 
+          <span class = 'num' onclick = 'calc.txt.value += "8"'><i>8</i></span>
+          <span class = 'num' onclick = 'calc.txt.value += "9"'><i>9</i></span>
+          <span class = 'num' onclick = 'calc.txt.value += "-"'><i>-</i></span>
+
+          <span class = 'num' onclick = 'calc.txt.value += "4"'><i>4</i></span>
+          <span class = 'num' onclick = 'calc.txt.value += "5"'><i>5</i></span>
+          <span class = 'num' onclick = 'calc.txt.value += "6"'><i>6</i></span>  
+          <span class = 'num' onclick = 'calc.txt.value += "+"'><i>+</i></span>  
+          
+          <span class = 'num' onclick = 'calc.txt.value += "1"'><i>1</i></span>
+          <span class = 'num' onclick = 'calc.txt.value += "2"'><i>2</i></span>
+          <span class = 'num' onclick = 'calc.txt.value += "3"'><i>3</i></span> 
+          <span class = 'num' onclick = 'calc.txt.value += "."'><i>.</i></span>
+          <span class = 'num' onclick = 'calc.txt.value += "0"'><i>0</i></span>
+          <span class = 'num' onclick = 'document.calc.txt.value = eval(calc.txt.value)'>
+            <i>=</i></span>
+            <!--use document.calc.txt.value to access the object-->  
+            <!-- <script src="calculator.js"></script> -->
+        </div>
+      </div>
+    </div>
+  
+  </body>
+</html>

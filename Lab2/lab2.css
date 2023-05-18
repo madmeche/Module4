@@ -4,11 +4,14 @@ body {
     }
 
     .card {
-    border: solid 2px green;
+    border: solid 2px orange;
     padding: 10px;
     background-color: wheat;
     width: 320px;
     margin: 20px;
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
 
 
     }
@@ -23,7 +26,7 @@ body {
     font-size: 2em
     }
 
-    #cart-list {
+    #card-list {
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
