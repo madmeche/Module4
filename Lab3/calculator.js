@@ -9,7 +9,7 @@ arr.forEach((button) => {
       string = eval(string);
       input.value = string;
     } else if (e.target.innerHTML === "AC") {
-      string = " ";
+      string = "";
       input.value = string;
     } else if (e.target.innerHTML === "DEL") {
         string = string.substring(0, string.length - 1);

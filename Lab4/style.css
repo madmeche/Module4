@@ -1,0 +1,66 @@
+.card {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 10 px;
+    margin: 10px;
+}
+
+.card-columns {
+    @media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+    @media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+  }
+ 
+
+.card-body {
+    border: 2px solid blue;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  width: 150px;
+  height: 150px;
+  padding: 0px;
+    }
+
+.card-title {
+    border: 2px solid green;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    background-color: grey;
+    color: white;
+    padding: 0px;
+    /* border-radius: 10px; */
+    margin-top: 0px;
+    margin-bottom: 75px;
+    font-size: 10px;
+    font-weight: 600;
+    }
+
+p {
+    margin-block-start: 50px;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    }
+
+.card-text{
+    border: 2px solid orangered;
+    height: 75px;
+    width: 150px;
+    margin-top: 75px;
+    margin-bottom: 0px;
+    /* display: flex;
+    justify-content: bottom;
+    align-items: center; */
+    font-size: 10px;
+    color: #000;
+    /* margin-top: 100px; */
+        }
+
+
+
