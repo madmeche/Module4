@@ -1,40 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style> 
-
-.block{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: aliceblue;
-    font-weight:bold;
-}
-
-div {
-  width: 40px;
-  height: 40px;
-  background-color: maroon;
-  animation-name: example; /*what are other names that can be used?*/
-  position: relative;
-  animation-duration: 6s;
-  animation-fill-mode: forwards;
-
-}
-
-@keyframes example {
-  0%   {background-color: maroon; left:0px; top:0px;}
-  75%  {background-color: moccasin; left:0px; top:200px;}
-  75% {color: black;}
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
 </head>
 <body>
+    <div class="news-btn-div" data-tab="news-2" onclick="req1()">2</div>
 
-
-<div class = block>block</div>
-
-
+    <div id="news-2" class="news-content-container-flex">
+      <div class="news-title">
+       <h1>Hello World</h1> 
+        <span id="printTitle">
+        </span>
+      </div>
+      <div class="news-content-1">
+        
+        <span id="printBody">
+        </span>
+      </div>
+    </div>
 </body>
 </html>

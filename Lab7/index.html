@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-weight:bold;
+}
+
+div {
+  width: 60px;
+  height: 40px;
+  background-color: maroon;
+  box-shadow: 1px 3px 3px 2px rgb(170, 166, 166);
+  
+  animation-name: example; /*what are other names that can be used?*/
+  position: relative;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+
+
+}
+
+@keyframes example {
+  0%   {background-color: maroon; left:0px; top:0px;}
+  75%  {background-color: moccasin; left:0px; top:200px;}
+  75% {color: rgba(90, 87, 87, 0.973);}
+}
+
+</style>
+</head>
+<body>
+
+
+<div class = text>BLOCK</div>
+
+
+</body>
+</html>
