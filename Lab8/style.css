@@ -30,12 +30,10 @@
 */
 
 .image {
-top: 0;
-height: 30rem;
-width: 90rem;
-
+  top: 0;
+  height: 30rem;
+  width: 90rem;
 }
- 
 
 @media only screen and (max-width: 1200rem) {
   .feed {
@@ -51,9 +49,17 @@ width: 90rem;
   }
 }
 
-.username{
-    font-size: 30px;
+.username {
+  font-size: 30px;
 }
+
+button:hover {
+    color:blue
+}
+
+/* button:active {
+  color: red;
+} */
 
 .description {
   display: flex;
