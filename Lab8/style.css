@@ -61,12 +61,36 @@ button:hover {
   color: red;
 } */
 
+img.like {
+  height: 5px;
+  width: 5px
+}
+
+button.like{
+  border: none;
+  height: 1px;
+  widht: 1px;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+   transition: transform .7s ease-in-out;
+  margin-left:10px;
+
+}
+button:hover.like{
+  transform: rotate(360deg);
+
 .description {
   display: flex;
+  bottom:0
   align-items: center;
   padding: 1rem;
-  align-items: center;
-  bottom: 0;
+  justify-content: center;
   color: black;
   font-size: 20px;
+}
+
+.image {
+  border: 2px solid black;
+  border-radius: 50%;
 }
